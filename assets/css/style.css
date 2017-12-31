@@ -1,0 +1,204 @@
+.clearfix {
+    float: none;
+    clear: both;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width: 80%;
+    min-height: 500px;
+    margin: 0 auto;
+    /*centrar */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+}
+
+header {
+    padding: 50px;
+    background: blue;
+}
+
+header #logo {
+    width: 90px;
+    height: 70px;
+    display: block;
+    float: left;
+    margin-top: -30px;
+}
+
+header h1 {
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-left: 15px;
+    line-height: 55px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    float: left;
+    margin-top: -25px;
+}
+
+.main {
+    padding: 15px;
+    /* separar del borde todo el contenido de la caja*/
+}
+
+.main h1 {
+    color: #444;
+}
+
+.restaurant-item {
+    list-style: none;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    /*The padding-top property sets the top padding (space) of an element.*/
+    height: 100px;
+    float: left;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    color: gray;
+}
+
+#restaurantList {
+    /*#id>div*/
+    padding: 0px;
+    margin: 0px;
+}
+
+#restaurantList .image {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    /*The overflow property specifies what happens if content overflows an element's box.
+    This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.*/
+    background: #ccc;
+    float: left;
+}
+
+.restaurant-item .data {
+    margin-left: 120px;
+    padding-top: 15px;
+}
+
+.restaurant-item .image img {
+    height: 100px;
+}
+
+.restaurant-item h4 {
+    color: #444;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.btn {
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-color: blue;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #ddd;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    background: #0074D9;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background: #0A0;
+    border-color: #59a600;
+}
+
+.btn-eliminar {
+    background: rgb(248, 47, 64);
+    border-color: rgb(250, 39, 39);
+}
+
+.loading {
+    list-style: none;
+    text-decoration: none;
+}
+
+.restaurant-box .descripcion {
+    color: white;
+    background: lightblue;
+    font-size: 14px;
+    padding: 25px;
+    box-shadow: 2px 2px black;
+    text-align: center;
+    width: 900px;
+}
+
+.restaurant-box h1 {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    background: #F2f2f2;
+    height: 45px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    margin: 0px;
+    display: block;
+    float: left;
+    width: 150px;
+    border-right: 1px solid white;
+    height: 80px;
+    line-height: 35px;
+    padding: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: #444;
+    transition: all 100ms;
+}
+
+nav ul li a:hover {
+    background: #1976D2;
+    color: white;
+    opacity: 0.8;
+}
+
+.seguro {
+    float: left;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    margin-top: -45px;
+}
+
+.imagen-restaurant-detalle {
+    width: 200px;
+    float: left;
+    margin-right: 30px;
+}
+
+.data-rest {
+    float: left;
+}

@@ -1,0 +1,23 @@
+<!--{{4| prueba:2}} -->
+<header id="header">
+    <a [routerLink]="['/']"> <img id="logo" src="../../assets/img/angularjs-512.png" alt=""></a>
+    <h1> {{nombre}}</h1>
+    <p>{{fecha | date:"fullDate" | uppercase}}</p>
+</header>
+<nav id="nav">
+    <ul>
+        <li>
+            <a [routerLink]="['/']">Inicio</a>
+        </li>
+        <li> <a [routerLink]="['/crear-restaurante']">Crear Restaurante</a></li>
+        <li>
+            <a [routerLink]="['/crear-restaurante']">Contacto</a></li>
+        <li>
+            <a [routerLink]="['/donde-como-hoy','2']"> Donde comer Hoy</a></li>
+    </ul>
+</nav>
+<div class="clearfix"></div>
+<section class="main">
+    <!--<restaurants-list></restaurants-list> -->
+    <router-outlet></router-outlet>
+</section>

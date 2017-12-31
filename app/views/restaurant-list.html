@@ -1,0 +1,27 @@
+<h1>{{titulo}}</h1>
+
+<ul id="restaurantList">
+    <li class="loading">
+        <img src="../assets/img/loading.gif" alt="" height="100px;" width="100px;" *ngIf="loading">
+    </li>
+    <li *ngFor=" let rest of restaurantes" class="restaurant-item">
+        <div class="image">
+            <!-- <img src="{{}}" alt="" *ngIf="rest.img && rest.img && 'null' "> -->
+        </div>
+        <div class="data">
+            <h4>{{rest.title}}</h4>
+            <p>{{rest.body}}</p>
+            <p>
+                <a [routerLink]="['/restaurante', rest.id]" class="btn ">Ver</a>
+                <a [routerLink]="['/editar-restaurante','rest.id']" class="btn btn-editar">Editar</a>
+                <a (click)="onBorrarConfirm(rest.id)" class="btn btn-eliminar">Eliminar</a>
+            </p>
+            <div class="seguro" *ngIf="confirmacion === rest.id">
+                <a (click)="onBorrarRestaurante(rest.id)" class="btn btn-eliminar">Eliminar</a>
+                <a (click)="onCancelarConfirm(rest.id)" class="btn btn-ver">Cancelar</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </li>
+    <div class="clearfix"></div>
+</ul>

@@ -1,0 +1,42 @@
+<h1>{{titulo}}</h1>
+<!-- We will use here NgForm with NgModel directive. When we use ngModel with <form> tag, we have also to supply a name attribute to register a control with parent form using that name. 
+When we are using parent form, we need not to use two-way binding to get form fields values in our class.  -->
+
+<form #miFormulario="ngForm" (ngSubmit)="onSubmit()">
+    <label>Nombre del Restaurante</label>
+    <p>
+        <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="restaurante.title" required>
+        <!--[(ngModel)]="restaurante.nombre" -->
+        <span style="color: red;" *ngIf="!nombre.valid">*Nombre es obligatorio</span>
+        <!-- nombre del ngcontrol -->
+        <!-- ngControl: validaciones -->
+    </p>
+
+    <label>Direccion</label>
+    <p>
+        <input type="text" #direccion="ngModel" name="direccion" [(ngModel)]="restaurante.body" required>
+        <!--[(ngModel)]="restaurante.direccion"  style="border-color: red;" -->
+        <span style="color: red;" *ngIf="!direccion.valid">*La direccion  es obligatorio</span>
+        <!-- #direccion es identificador -->
+    </p>
+
+    <label>Descripcion</label>
+    <p>
+        <textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="restaurante.descripcion" required>
+        </textarea>
+        <span style="color: red;" *ngIf="!descripcion.valid">*Descripcion es obligatorio</span>
+        <!-- #direccion es identificador -->
+    </p>
+    <label>Precio:</label>
+    <p>
+        <select #precio (change)="callPrecio(precio.value)" name="precio">
+        <option value="bajo" [attr.selected] = "restaurante.precio ==='bajo' ? 'selected' : null">Bajo</option>
+        <option value="normal" [attr.selected] = "restaurante.precio ==='normal' ? 'selected' : null" >Normal</option>
+        <option value="alto" [attr.selected] = "restaurante.precio ==='alto' ? 'selected' : null">Alto</option>
+        </select>
+    </p>
+    <label for="">Imagen</label>
+    <p> <input type="file" placeholder="Subir imagen" (change)="fileChangeEvent($event)"> </p>
+    <input type="submit" value="{{titulo}}" [disabled]="!miFormulario.form.valid">
+
+</form>
